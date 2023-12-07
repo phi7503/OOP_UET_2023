@@ -1,6 +1,6 @@
 1.
 a. đối tượng
-b. trạng thái
+b. thành viên dữ liệu(data member)
 2.A
 3.B
 4.B
