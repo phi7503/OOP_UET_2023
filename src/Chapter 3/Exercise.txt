@@ -1,0 +1,60 @@
+1.)
+Lớp
+Lớp
+Phương thức
+Lớp
+Thuộc tính
+Phương thức 
+Thuộc tính
+Lớp
+Thuộc tính
+Lớp
+2.)
+a.)
+ class SoundDeck {
+    boolean canRecord = false;
+
+    void play() {
+        System.out.println("playing");
+    }
+
+    void record() {
+        System.out.println("recording");
+    }
+ }
+
+  class SoundDeckTestDrive {
+    public static void main(String[] args) {
+        SoundDeck t = new SoundDeck();  // Add this line to initialize the SoundDeck object
+        t.canRecord = true;
+        t.play();
+        if (t.canRecord == true) {
+            t.record();
+        }
+    }
+  }
+
+b.)
+  class DVDPlayer {
+    boolean canRecord = false;
+
+    void playDVD() { // Add this function 
+        System.out.println("DVD playing");
+    }
+
+    void recordDVD() {
+        System.out.println("DVD recording");
+    }
+}
+
+class DVDPlayerTestDrive {
+    public static void main(String[] args) {
+        DVDPlayer d = new DVDPlayer();
+        d.canRecord = true;
+        d.playDVD();
+        
+        if (d.canRecord == true) {
+            d.recordDVD();
+        }
+    }
+}
