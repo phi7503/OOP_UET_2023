@@ -1,0 +1,47 @@
+1.)
+a.0
+b.false
+c.cơ bản (primitive types)/tham chiếu (reference types)
+2.)
+a.Đúng 
+b.Sai
+c.Đúng
+d.Sai
+3.)
+Biến thực thể có thể tham chiếu đến biểu diễn của một đối tượng hoặc thực thể trong mô hình dữ liệu. 
+Các biến thực thể trong cơ sở dữ liệu thường lưu trữ thông tin về các đối tượng hoặc thực thể đó.
+6.)
+Trước khi đến đoạn "//do stuff", các đối tượng HeapQuiz được tạo ra là hq[0], hq[1], và hq[2]. Hãy xem xét chiếu tới các đối tượng sau đoạn "//do stuff":
+
+hq[0]: Sau đoạn hq[3] = hq[2];, hq[0] trở thành đối tượng mà hq[2] đã trở thành.
+
+hq[1]: Sau đoạn hq[4] = hq[1];, hq[1] và hq[4] đều chiếu tới đối tượng mà hq[0] đã trở thành.
+
+hq[2]: Sau đoạn hq[2] = hq[0];, hq[2] trở thành đối tượng mà hq[0] đã trở thành.
+
+hq[3]: Sau đoạn hq[3] = null;, hq[3] trở thành null.
+
+hq[4]: Sau đoạn hq[4] = hq[0];, hq[4] và hq[1] đều chiếu tới đối tượng mà hq[0] đã trở thành.
+
+Vậy sau đoạn "//do stuff", các phần tử mảng hq[0] đến hq[4] chiếu tới các đối tượng như sau:
+
+hq[0] chiếu tới đối tượng mà hq[2] đã trở thành.
+hq[1] và hq[4] chiếu tới đối tượng mà hq[0] đã trở thành.
+hq[2] chiếu tới đối tượng mà hq[0] đã trở thành.
+hq[3] chiếu tới null.
+hq[4] chiếu tới đối tượng mà hq[0] đã trở thành.
+(tham khảo GPT)
+7.)
+Cả hai giải pháp đều có ưu và nhược điểm riêng.
+
+Giải pháp của Sửu có ưu điểm là dễ viết, dễ hiểu và có thể dễ dàng mở rộng để xử lý số lượng danh bạ lớn hơn. 
+Tuy nhiên, giải pháp này có nhược điểm là lãng phí bộ nhớ, vì mảng a có kích thước cố định là 16, trong khi 
+chỉ cần dùng tối đa 10 phần tử.
+
+Giải pháp của Tí có ưu điểm là tiết kiệm bộ nhớ, vì chỉ cần dùng một biến tham chiếu để lưu trữ đối tượng Contact hiện tại. 
+Tuy nhiên, giải pháp này có nhược điểm là khó viết và khó hiểu hơn, vì phải sử dụng vòng lặp while để cập nhật giá trị của 
+biến tham chiếu.
+
+Vì danh bạ luôn có thể cập nhật và mở rộng liên tục nên chọn cách của Sửu sẽ tối ưu hơn.
+
+(Tham khảo GG)
