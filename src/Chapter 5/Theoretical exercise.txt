@@ -1,0 +1,57 @@
+1.)
+biến thực thể
+giá trị trả về
+đối số
+private
+truyển bằng giá trị
+biến thực thể
+đối số
+phương thức
+public
+phương thức
+phương thức
+phương thức
+
+
+2.)
+a)kiểu dữ liệu/ tên
+b)void
+
+
+3.)
+a.Đúng
+b.Đúng
+c.Đúng
+d.Sai. Vì không thể gọi phương thức từ một biến kiểu cơ bản. Phương thức là một khối lệnh, và chỉ các biến kiểu đối tượng mới có thể 
+chứa khối lệnh.
+e.Sai. Vì các biến địa phương kiểu cơ bản về mặc định là chưa được khởi tạo sẵn. Giá trị của các biến địa phương kiểu cơ bản là không 
+xác định trước khi phương thức được gọi
+f.Đúng
+
+
+4.)
+Biến thực thể là biến được khai báo trong một lớp nhưng không nằm trong một phương thức nào. Biến thực thể thuộc về một đối tượng và 
+sống cùng với đối tượng đó. Nếu đối tượng vẫn còn sống thì biến thực thể của nó cũng vậy.
+
+Biến địa phương là biến được khai báo bên trong một phương thức. Biến địa phương chỉ tồn tại bên trong phương thức nơi nó được khai báo,
+và chỉ sống từ khi phương thức đó được chạy cho đến khi phương thức đó kết thúc.
+
+
+5.)
+
+Mục đích của tham số phương thức: Tham số phương thức là biến được truyền vào phương thức khi gọi phương thức. Tham số cho phép phương 
+thức truy cập dữ liệu từ bên ngoài phương thức.
+
+Phân biệt giữa tham số và đối số
+
+-Tham số là biến được khai báo trong khai báo phương thức.
+-Đối số là giá trị được truyền vào tham số khi gọi phương thức.
+
+6.)
+-Để đóng gói dữ liệu. Khi khai báo biến thực thể với phạm vi truy cập private, chúng ta có thể sử dụng phương thức set và phương thức 
+get để truy cập biến thực thể đó. Điều này giúp chúng ta kiểm soát cách mà biến thực thể đó được truy cập và thay đổi.
+-Để kiểm tra tính hợp lệ của dữ liệu. Phương thức set có thể được sử dụng để kiểm tra tính hợp lệ của dữ liệu trước khi thay đổi biến 
+thực thể. Điều này giúp chúng ta tránh được các lỗi do dữ liệu không hợp lệ gây ra.
+-Để đơn giản hóa mã. Phương thức set và phương thức get có thể giúp chúng ta đơn giản hóa mã bằng cách cung cấp một cách tiêu chuẩn để 
+truy cập biến thực thể.
+
