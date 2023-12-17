@@ -1,0 +1,18 @@
+1.)
+a.Sai
+b.Sai
+c.Đúng
+
+2.)
+Từ khóa new được dùng để khởi tạo một đối tượng mới của 1 lớp cụ thể.Khi sử dụng từ khóa này sẽ xảy ra:
+-Cấp phát vùng nhớ cho đối tượng mới
+-Khởi tạo đối tượng mới bằng cách gọi hàm hởi tạo của nó
+
+3.)
+Hàm khởi tạo mặc định là một hàm không có tham số và tên của hàm khởi tạo trùng với tên của lớp.
+Nếu một lớp không có hàm khởi tạo do lập trình viên khai báo, thì trình biên dịch sẽ tạo một hàm khởi tạo mặc định cho lớp đó.
+Hàm khởi tạo mặc định sẽ khởi tạo các biến thực thể của đối tượng với giá trị mặc định
+
+5.)
+
+Dòng mã f2 = null; sẽ làm cho đối tượng f2 bị mất dấu và sẽ bị garbage collector thu hồi bất cứ lúc nào
