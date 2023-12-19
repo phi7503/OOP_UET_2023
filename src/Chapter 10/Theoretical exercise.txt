@@ -1,0 +1,15 @@
+1.)
+a.static
+b.final
+2.)
+a.Sai
+b.Sai
+c.Đúng
+d.Đúng
+e.Sai
+f.Đúng
+g.Đúng
+h.Đúng
+i.Sai
+j.Sai
+k.Đúng
