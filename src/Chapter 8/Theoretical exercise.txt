@@ -1,0 +1,110 @@
+1.)
+a.trừu tượng (abstract)
+b.cụ thể
+c.interface
+d.abstract
+
+
+2.)
+a. Sai
+b. Đúng
+
+
+3.)
+Phương thức trừu tượng là một phương thức không co bất kì phần thực thi hoặc phương thức nào.
+VD:
+abstract class ClassName {
+  //class body
+}
+
+Một số tình huống khi cần sử dụng phương thức trừu tượng:
+
+-Lập trình giao diện (Interface Programming)
+-Lớp cha chứa một số phương thức chung, nhưng không thể đưa ra một cài đặt chung đầy đủ cho một số phương thức
+-Bảo toàn đồng nhất trong các lớp con
+
+4.)
+Lớp Trừu Tượng (Abstract Class):
+-Có thể chứa cả phương thức trừu tượng và phương thức có cài đặt.
+-Có thể có biến thành viên (fields).
+-Các lớp con kế thừa từ lớp trừu tượng chỉ có thể kế thừa từ một lớp trừu tượng duy nhất.
+-Có thể chứa các phương thức bình thường với cài đặt cụ thể.
+-Sử dụng từ khóa abstract để khai báo phương thức trừu tượng.
+
+Interface:
+-Chỉ chứa phương thức trừu tượng (không có cài đặt).
+-Không thể có biến thành viên (fields) hoặc cài đặt.
+-Một lớp có thể triển khai nhiều interface.
+-Đồng bộ hóa các lớp không liên quan thông qua một giao diện chung.
+-Sử dụng từ khóa interface để định nghĩa.
+
+Sử dụng lớp trừu tượng khi muốn cung cấp một cài đặt chung cho một số phương thức và đồng thời định nghĩa các phương thức để các lớp 
+con có thể cài đặt lại.
+
+Sử dụng interface khi muốn định nghĩa một giao diện chung cho một nhóm lớp không liên quan mà không cung cấp bất kỳ cài đặt nào và khi 
+một lớp cần triển khai nhiều giao diện.
+
+5.)
+-Đa hình có tác dụng giúp cho cây thừa kế có khả năng mở rộng lớn, như khi 1 lớp con kế thừa từ càng nhiều lớp cha, nó sẽ thì sẽ càng 
+có thể sử dụng lại nhiều phương thức 
+-Đa hình có thể cho phép lập trình viên tạo cấu trúc dữ liệu dành cho đối tượn thuộc tất cả các lớp.
+
+
+6.)
+-Gán Tham Chiếu Trực Tiếp (Direct Reference Assignment)
+VD: Animal animal = new Dog();
+
+-Ép Kiểu (Type Casting)
+VD: Animal animal = (Animal) new Dog();
+
+-Sử Dụng Phương Thức Trung Gian (Using Intermediate Method)
+VD: public Animal getAnimal() {
+    return new Dog();
+}
+// ...
+Animal animal = getAnimal();
+
+-Sử Dụng Constructor Của Lớp Con (Using Constructor of Subclass)
+VD:Animal animal = new Dog();
+
+
+7.)
+Giải thích quan điểm rằng đa hình cho phép lập trình tổng quát thay vì lập trình
+cho từng trường hợp cụ thể:
+-Đa hình đi kèm với quan hệ thừa kế và nó có nghĩa rằng cùng một cái tên có thể được hiểu theo các cách khác nhau tùy từng tình huống
+-Các đối tượng thuộc các lớp dẫn xuất khác nhau có thể được đối xử như nhau, như thể chúng là các đối tượng thuộc lớp cơ sở
+
+Lợi ích của lập trình tổng quát:
+-Dễ Bảo Trì và Mở Rộng: Thay vì phải sửa đổi nhiều đoạn mã khi thêm một lớp mới, chúng ta có thể thêm lớp mới mà không làm ảnh hưởng 
+đến các phần khác của hệ thống.
+
+-Tính Linh Hoạt và Tương Tác Dễ Dàng: Đa hình giúp tạo ra mã nguồn linh hoạt và dễ mở rộng, giúp các đối tượng tương tác một cách dễ 
+dàng mà không cần biết chi tiết cụ thể về từng đối tượng.
+
+
+8.)
+-Trong lập trình hướng đối tượng, một lớp con có thể thừa kế từ một lớp cha và đồng thời triển khai (implement) một hoặc nhiều giao 
+diện. Sự kết hợp này tạo ra một cấu trúc thừa kế đa hình, trong đó lớp con được kế thừa từ lớp cha và đồng thời triển khai các giao diện.
+
+VD:
+class Shape {
+    // ...
+}
+
+// Giao diện
+interface Resizable {
+    void resize(int percentage);
+}
+
+// Lớp con thừa kế từ lớp cha và triển khai giao diện
+class ResizableCircle extends Circle implements Resizable {
+    // Các phương thức của lớp cha được kế thừa
+    // ...
+
+    // Phương thức triển khai từ giao diện Resizable
+    @Override
+    public void resize(int percentage) {
+        // Cài đặt logic thay đổi kích thước của hình tròn
+        // ...
+    }
+}
