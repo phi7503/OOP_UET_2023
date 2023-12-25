@@ -1,0 +1,78 @@
+1.)
+-NullPointerException
+-ArithmeticException
+-ArrayIndexOutOfBoundsException
+-ClassCastException
+-FileNotFoundException
+
+
+2.)
+Nếu không có ngoại lệ được ném trong một khối try, điều khiển sẽ đi tới khối catch tiếp theo, nếu có. Nếu không có khối catch nào, 
+điều khiển sẽ đi tới dòng code ngay sau khối try.
+VD:
+try {
+  // Code không ném ngoại lệ
+} catch (Exception e) {
+  // Xử lý ngoại lệ
+}
+
+
+3.)
+Nếu không có khối catch nào bắt được đối tượng ngoại lệ bị ném, chương trình sẽ bị lỗi. Lỗi này được gọi là Uncaught Exception.
+
+Khi một lỗi Uncaught Exception xảy ra, chương trình sẽ ngay lập tức dừng hoạt động và hiển thị thông báo lỗi cho người dùng. Thông 
+báo lỗi bao gồm loại ngoại lệ, thông tin về vị trí xảy ra ngoại lệ và thông tin bổ sung khác.
+
+
+4.)
+Nếu nhiều hơn một khối catch có thể bắt đối tượng ngoại lệ bị ném, thì khối catch sẽ được thực thi tương ứng với loại ngoại lệ của 
+đối tượng ngoại lệ
+Nếu đối tượng ngoại lệ bị ném có thể được bắt bởi nhiều khối catch, thì khối catch có loại ngoại lệ tương ứng nhất sẽ được ưu tiên thực thi
+
+
+5.)
+Khối finally trong Java được sử dụng để thực hiện mã bất kể ngoại lệ nào xảy ra trong khối try-catch. Khối finally được đặt sau 
+khối try-catch và được thực thi ngay cả khi ngoại lệ không được xử lý.
+
+Khối finally thường được sử dụng để đóng kết nối cơ sở dữ liệu, giải phóng tài nguyên hoặc thực hiện các tác vụ dọn dẹp khác.
+
+
+6.)
+Khi một tham chiếu địa phương trong một khối try ném một ngoại lệ, tham chiếu đó sẽ bị vô hiệu hóa. Điều này có nghĩa là tham chiếu đó 
+sẽ không còn trỏ đến đối tượng mà nó đã trỏ đến trước khi ngoại lệ được ném.
+Một cách để hiểu điều này là nghĩ về tham chiếu địa phương như một con trỏ đến một đối tượng. Khi ngoại lệ được ném, con trỏ đó sẽ bị 
+vô hiệu hóa. Điều này có nghĩa là con trỏ đó sẽ không còn trỏ đến bất kỳ đối tượng nào.
+
+Việc tham chiếu địa phương bị vô hiệu hóa khi ném ngoại lệ là một tính năng quan trọng của ngôn ngữ Java. Tính năng này giúp đảm bảo 
+rằng các đối tượng không bị truy cập sau khi ngoại lệ xảy ra. Điều này có thể giúp ngăn ngừa các lỗi và bảo vệ hệ thống khỏi các trạng 
+thái không ổn định.
+
+Dưới đây là một số ví dụ cụ thể về cách tham chiếu địa phương bị vô hiệu hóa khi ném ngoại lệ:
+
+Nếu tham chiếu địa phương được sử dụng để truy cập một phương thức, thì phương thức đó sẽ không được thực thi.
+Nếu tham chiếu địa phương được sử dụng để truy cập một thuộc tính, thì thuộc tính đó sẽ không thể được truy cập.
+Nếu tham chiếu địa phương được sử dụng để tạo một đối tượng mới, thì đối tượng mới sẽ không được tạo.
+Nhìn chung, điều quan trọng cần nhớ là tham chiếu địa phương sẽ bị vô hiệu hóa khi ném ngoại lệ. Điều này có thể ảnh hưởng đến cách 
+hoạt động của mã của bạn, vì vậy điều quan trọng là phải hiểu các tác động của tính năng này.
+
+
+7.)
+a.Sai
+b.Đúng
+c.Đúng
+d.Sai
+e.Đúng
+f.Sai
+g.Sai
+h.Đúng
+i.Sai
+j.Đúng
+k.Sai
+l.Sai
+m.Đúng
+n.Đúng
+
+
+
+
+

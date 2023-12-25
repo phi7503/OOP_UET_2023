@@ -1,0 +1,26 @@
+-String:
+  +Không thay đổi (Immutable): Một đối tượng String trong Java là không thể thay đổi sau khi đã được tạo ra. Khi bạn thực hiện bất kỳ 
+  phép toán nào trên chuỗi, nó sẽ tạo ra một đối tượng mới thay vì thay đổi đối tượng hiện tại.
+  +An toàn cho luồng (Thread-safe): Vì String không thể thay đổi, nó là an toàn cho việc sử dụng đa luồng mà không cần đồng bộ hóa.
+  +Hiệu suất tốt trong đọc dữ liệu
+  +Phương thức không thay đổi dữ liệu:
+
+
+-StringBuffer:
+  +Thay đổi (Mutable): StringBuffer là thay đổi, có nghĩa là nó có thể thay đổi trạng thái của đối tượng hiện tại mà không cần tạo ra 
+  đối tượng mới.
+  +An toàn cho luồng (Thread-safe): StringBuffer hỗ trợ đồng bộ hóa, điều này có nghĩa là nó an toàn khi sử dụng trong môi trường đa luồng.
+  +Hiệu suất không tốt hơn trong đọc dữ liệu: Đối với các hoạt động thay đổi liên tục, StringBuffer có thể hiệu quả hơn.
+
+
+
+-StringBuilder:
+  +Thay đổi (Mutable): Tương tự như StringBuffer, StringBuilder là thay đổi và có thể thay đổi trạng thái của đối tượng hiện tại mà 
+  không cần tạo ra đối tượng mới.
+  +Không an toàn cho luồng (Not Thread-safe): StringBuilder không hỗ trợ đồng bộ hóa, nên nó không an toàn khi sử dụng trong môi trường 
+  đa luồng.
+  +Hiệu suất cao hơn trong đọc dữ liệu: StringBuilder thường có hiệu suất tốt hơn StringBuffer do không phải chịu chi phí đồng bộ hóa.
+
+=>Lựa chọn giữa String, StringBuffer, và StringBuilder phụ thuộc vào yêu cầu của ứng dụng. Nếu bạn đang xử lý chuỗi không thay đổi, sử 
+dụng String. Nếu bạn đang thực hiện nhiều thay đổi trên chuỗi trong một môi trường đa luồng, sử dụng StringBuffer. Nếu bạn đang thực 
+hiện nhiều thay đổi trên chuỗi trong một môi trường đơn luồng, sử dụng StringBuilder để đạt được hiệu suất tốt nhất.
