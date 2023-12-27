@@ -1,0 +1,17 @@
+1.)
+a.Sai.Trong nhiều ngôn ngữ lập trình hỗ trợ generic, phương thức generic có thể trùng tên với một phương thức không generic. Chúng 
+ta có thể xem xét ví dụ với Java, nơi chúng ta có thể có một phương thức không generic và một phương thức generic cùng tên
+b.Đúng
+c.Đúng
+d.Sai.Tham số kiểu của các phương thức generic khác nhau có thể trùng nhau. Chúng ta có thể sử dụng cùng một tên tham số kiểu cho 
+các phương thức generic khác nhau trong một lớp hoặc một giao diện
+
+
+2.)
+Dòng ArrayList<Dog> dogs1 = new ArrayList<Animal>(); bị lỗi biên dịch vì kiểu dữ liệu của biến dogs1 là ArrayList<Dog>, trong khi 
+kiểu dữ liệu của đối tượng được khởi tạo là ArrayList<Animal>. Hai kiểu dữ liệu này không tương thích với nhau, vì Dog là một lớp 
+con của Animal, nhưng không phải là lớp cha của Animal.
+
+Vì vậy, khi biên dịch dòng khai báo này, trình biên dịch sẽ báo lỗi:
+
+Error:(1, 25) java: không thể khởi tạo kiểu dữ liệu 'ArrayList<Dog>' bằng đối tượng của kiểu dữ liệu 'ArrayList<Animal>'

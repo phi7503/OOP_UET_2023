@@ -1,0 +1,67 @@
+1.PHÂN BIỆT DEEP COPY VÀ SHALLOW COPY
+*Shallow copy:
+Chỉ copy các objet chính mà không copy các object con. Sẽ có thêm 1 object mới đc tạo ra nhưnh các object con vẫn giữu nguyên, khi đó 
+cả object chính mới và cũ đều tham chiếu tới các object con cũ
+VD:
+public class Person {
+
+    private Name name;
+
+    private Address address;
+
+    public Person(Person originalPerson) {
+
+         this.name = originalPerson.name;
+
+         this.address = originalPerson.address;
+    }
+}
+
+Tuy nhiên có những hạn chế như object mới và cũ không hoạt động độc lập với nhau bởi vì chúng cùng tham chiếu đến các lớp con, vì vậy 
+khi 1 trong những object mưới hoặc cũ thay dổi giá trị của các lớp con, nó sẽ ảnh hưởng tới các lớp còn lại
+
+*Deep copy:
+Khác với Shallow copy, Deep copy sẽ tạo ra một object mới hoàn toàn độc lập với object cũ mà vẫn giữ đc những giá trị ban đầu 
+VD: 
+public class Person {
+
+    private Name name;
+
+    private Address address;
+
+    public Person(Person otherPerson) {
+
+         this.name    =  new Name(otherPerson.name);
+
+         this.address =  new Address(otherPerson.address);
+    }
+}
+=> Deep copy cho phép chúng ta dễ dàng thay đổi các chi tiết trong object. Tuy nhiên trong lập trình hướng đối tượng, điều này đã vi 
+phạm nguyên tắc encapsulation.
+
+
+2.CUỘC ĐỜI CỦA 1 ĐỐI TƯỢNG
+Cuộc đời của một đối tượng phụ thuộc vào sự tồn tại của các tham chiếu chiếu tới nó. Nếu vẫn còn một tham chiếu thì đối tượng vẫn còn 
+sống trong heap. Nếu không còn tham chiếu nào thì đối tượng sẽ chết, hoặc ít ra đc coi như đã chết. Vậy có thể hiểu vòng đời của 1 đối 
+tượng là khoảng thời gian giữu việc tạo ra và chết của đối tượng đó.
+
+Có 3 giải đoạn trong vòng đời của đối tượng:
+-Giai đoạn tạo: Đối tượng được tạo ra bởi một hàm tạo (constructor). Trong giai đoạn này, đối tượng sẽ được cấp phát bộ nhớ và khởi tạo 
+các thuộc tính và phương thức của nó
+-Giai đoạn hoạt động: Đối tượng được sử dụng để thực hiện các nhiệm vụ. Trong giai đoạn này, đối tượng có thể tương tác với các đối 
+tượng khác hoặc với môi trường xung quanh.
+-Giai đoạn hủy: Đối tượng chết khi không còn cần thiết. Trong giai đoạn này, bộ nhớ được cấp phát cho đối tượng sẽ được giải phóng.
+
+
+3.HÀM KHỞI TẠO CHỒNG NHAU
+
+Cho phép một lớp có nhiều hàm khởi tạo với cùng tên nhưng khác nhau về số lượng và kiểu dữ liệu của các đối số. Điều này cho phép khởi 
+tạo các đối tượng theo các cách khac nhau phụ thuộc vào những yêu cầu cụ thể
+
+Có 2 loại hàm khởi tạo chồng nhau:
+-Hàm khởi tạo mặc định: Hàm khởi tạo mặc định là hàm khởi tạo không có đối số. Hàm khởi tạo mặc định được sử dụng để khởi tạo các đối 
+tượng với các giá trị mặc định
+-Hàm khởi tạo có đối số: Hàm khởi tạo có đối số là hàm khởi tạo có một hoặc nhiều đối số. Hàm khởi tạo có đối số được sử dụng để khởi 
+tạo các đối tượng với các giá trị được chỉ định bởi lập trình viên
+
+
